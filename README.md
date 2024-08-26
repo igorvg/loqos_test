@@ -56,6 +56,6 @@ Set the link from ngrok to <YOUR LINK FROM NGROK> field
 Run the Rasa bot:
 
 ```bash
-  rasa run actions && rasa run --enable-api --cors "*" --debug
+  rasa run actions & rasa run --enable-api --cors "*" --debug
 
 ```
