@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Rasa files
+.rasa/
+models/
+__pycache__/
+*.lock
+*.pkl
+*.json
+*.log
+*.db
+
+# Environment files
+.env
+venv/
+.venv/
+
+# System files
+.DS_Store
+.idea/
+.vscode/

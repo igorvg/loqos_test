@@ -1,0 +1,130 @@
+version: "3.1"
+
+nlu:
+- intent: start
+  examples: |
+    - /start
+    - перезапуск
+    - меню
+    - в главное меню
+
+- intent: greeting
+  examples: |
+    - привет
+    - зравствуй
+    - зравствуйте
+    - хай
+    - прив
+    - привки
+    - приветик
+    - приветики
+    - добрый день
+    - доброе утро
+    - добрый вечер
+
+- intent: help
+  examples: |
+    - /help
+    - что ты умеешь
+    - что ты можешь
+    - на что ты способен
+
+- intent: no_thanks
+  examples: |
+    - нет
+    - нет, спасибо
+    - спасибо
+    - благодарю
+    - это все
+    - нет это все
+    - нет все спасибо
+    - нет вопросов
+    - ничего не нужно
+    - не нужно
+    - спасибки
+    - сипки
+
+- intent: documents
+  examples: |
+    - документы
+    - бумажки
+    - документики
+    - какие документы нужны
+    - какие бумажки нужны
+
+- intent: company_setup
+  examples: |
+    - как открыть компанию
+    - как открыть компанию на Кипре
+    - как открыть бизнес
+    - как открыть свое дело
+    - бизнес
+    - компания
+    - свое дело
+
+- intent: taxes
+  examples: |
+    - налоги
+    - какие налоги
+    - какие ставки налогов
+    - налогообложение
+    - таксы
+  
+- intent: visas_entry
+  examples: |
+    - Визы для въезда
+    - Визы чтобы въехать
+    - Въездные визы
+
+- intent: police_certificate
+  examples: |
+    - Справка о несудимости
+    - Несудимость
+    - Отсутствие судимости
+
+- intent: documents_translation
+  examples: |
+    - Перевод документов
+    - Документальный перевод
+
+- intent: other_question
+  examples: |
+    - Другой вопрос
+    - Спросить о другом
+    - Узнать другое
+    - Другое
+    - Своё
+
+- intent: thanks
+  examples: |
+    - Спасибо
+    - Отлично
+    - Спасибо большое
+    - Ага, понял
+    - Понял
+
+- intent: company_types
+  examples: |
+    - [Типы компаний](company_choice)
+
+
+- intent: create_company
+  examples: |
+    - [Зарегистрировать компанию](company_choice)
+
+
+- intent: obligations_payments
+  examples: | 
+    - [Обязательства и платежи](company_choice)
+
+- intent: become_tax_resident
+  examples: | 
+    - [Стать налоговым резидентом Кипра](taxes_choice)
+
+- intent: tax_calculator
+  examples: | 
+    - [Калькулятор налогообложения](taxes_choice)
+
+- intent: personal_taxation
+  examples: |
+    - [Индивидуальное налогообложение](taxes_choice)

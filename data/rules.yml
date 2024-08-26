@@ -1,0 +1,44 @@
+version: "3.1"
+
+rules:
+- rule: Start or restart
+  steps:
+  - intent: start
+  - action: utter_start
+  - action: action_start_text_btns
+
+- rule: No match fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_no_match
+
+- rule : Say hello in response
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - action: action_start_text_btns
+
+- rule: Help message 
+  steps:
+  - intent: help
+  - action: utter_help
+  - action: action_start_text_btns
+
+- rule: No help needed
+  steps:
+  - intent: no_thanks
+  - action: utter_no_thanks_1
+  - action: utter_no_thanks_2
+  - action: action_start_text_btns
+
+- rule: thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - action: action_start_text_btns
+
+- rule: other question
+  steps:
+  - intent: other_question
+  - action: utter_other_question
+  - action: action_start_text_btns

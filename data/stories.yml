@@ -1,0 +1,88 @@
+version: "3.1"
+
+stories:
+
+- story: documents
+  steps:
+  - intent: documents
+  - action: utter_documents_entry
+  - action: action_documents_text_btns
+
+- story: docunemts — visas
+  steps:
+  - intent: visas_entry
+  - action: utter_entry_visas
+
+- story: documents — police certificate
+  steps:
+  - intent: police_certificate
+  - action: utter_police_certificate
+
+- story: documents — docs translation
+  steps:
+  - intent: documents_translation
+  - action: utter_documents_translation
+
+- story: seting up a company
+  steps:
+  - intent: company_setup
+  - action: utter_company_setup_entry
+
+- story: company setup company types
+  steps: 
+  - intent: company_types
+    entities:
+    - company_choice: "types"
+  - slot_was_set:
+    - company_choice: "types"
+  - action: action_company_set_option
+
+- story: company setup company create company
+  steps: 
+  - intent: create_company
+    entities:
+    - company_choice: "setup"
+  - slot_was_set:
+    - company_choice: "setup"
+  - action: action_company_set_option
+
+- story: company setup company obligations payments
+  steps:
+  - intent: obligations_payments
+    entities:
+    - company_choice: "payments"
+  - slot_was_set:
+    - company_choice: "payments"
+  - action: action_company_set_option
+
+- story: taxes
+  steps: 
+  - intent: taxes
+  - action: utter_taxes
+
+- story: taxes bacome tax resident
+  steps:
+  - intent: become_tax_resident
+    entities:
+    - taxes_choice: "residention"
+  - slot_was_set:
+    - taxes_choice: "residention"
+  - action: action_taxes_set_option
+
+- story: taxes tax calculator
+  steps:
+  - intent: tax_calculator
+    entities:
+    - taxes_choice: "calculator"
+  - slot_was_set:
+    - taxes_choice: "calculator"
+  - action: action_taxes_set_option
+
+- story: taxes individual taxation
+  steps:
+  - intent: personal_taxation
+    entities:
+    - taxes_choice: "personal_tax"
+  - slot_was_set:
+    - taxes_choice: "personal_tax"
+  - action: action_taxes_set_option
